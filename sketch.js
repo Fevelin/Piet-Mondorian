@@ -11,10 +11,10 @@ function setup() {
 
     //size of each square in pixels
     const squareSize = 50;
-    //number of cells of the gric
-    const cellNumber = 10;
     //canvas size in pixels
-    const canvasSize = squareSize * cellNumber;
+    const canvasSize = 800;
+
+    const possibleCellsizes = [squareSize, 2 * squareSize, 3 * squareSize];
 
     const width = squareSize;
     const height = squareSize;
@@ -40,15 +40,17 @@ function setup() {
             // use fill to fill all the square with one color
             fill(myColor)
 
+            const actualWidth = random(possibleCellsizes)
+
 
             //rect(x, y, width, height)
             //x = position of the left of the square
             //y = position of the top og the square
             //width = size of the width of the rectangle
             //horizontal = size of the horizantol of the rectangle
-            rect(x, y, width, height);
+            rect(x, y, actualWidth, height);
 
-          x = x + width;
+          x = x + actualWidth;
 
         }
         y = y + height;
