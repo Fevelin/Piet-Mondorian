@@ -14,10 +14,7 @@ function setup() {
     //canvas size in pixels
     const canvasSize = 800;
 
-    const possibleCellsizes = [squareSize, 2 * squareSize, 3 * squareSize];
-
-    const width = squareSize;
-    const height = squareSize;
+    const possibleCellsizes = [squareSize, 2 * squareSize, 3 * squareSize, 4 * squareSize];
 
     const borderColor = color("#404040");
 
@@ -46,7 +43,7 @@ function setup() {
             // use fill to fill all the square with one color
             fill(myColor)
             stroke(borderColor);
-            strokeWeight(5);
+            strokeWeight(10);
 
             let actualWidth = random(possibleCellsizes);
             if(x + actualWidth > canvasSize) actualWidth = canvasSize - x;
