@@ -1,6 +1,14 @@
 
 function setup() {
 
+    //#f3f3f3 - white
+    //#f50f0f - red
+    //#fae317 - yellow
+    //#000000 - yellow
+    //#96#0c84be - blue
+
+    const possibleColors = ["#f3f3f3", "#f50f0f", "#fae317", "#000000", "#96#0c84be"];
+
     //size of each square in pixels
     const squareSize = 100;
     //number of cells of the gric
@@ -17,7 +25,10 @@ function setup() {
             const green = random(255);
             const blue = random(255);
 
-            const myColor = color(red, green, blue)
+
+            const colorCode = random(possibleColors);
+
+            const myColor = color(colorCode);
 
             // use fill to fill all the square with one color
             fill(myColor)
@@ -31,10 +42,11 @@ function setup() {
             const width = squareSize;
             const height = squareSize;
 
-            //square(x, y, s)
+            //rect(x, y, width, height)
             //x = position of the left of the square
             //y = position of the top og the square
-            //s = size of the side of the square
+            //width = size of the width of the rectangle
+            //horizontal = size of the horizantol of the rectangle
             square(x, y, width);
 
             
