@@ -29,6 +29,8 @@ function setup() {
     while(y < canvasSize) {
         x = 0;
 
+        const actualHeight = random(possibleCellsizes);
+
         while(x < canvasSize) {
 
             //choose random hex code from all possible colors
@@ -40,7 +42,7 @@ function setup() {
             // use fill to fill all the square with one color
             fill(myColor)
 
-            const actualWidth = random(possibleCellsizes)
+            const actualWidth = random(possibleCellsizes);
 
 
             //rect(x, y, width, height)
@@ -48,12 +50,12 @@ function setup() {
             //y = position of the top og the square
             //width = size of the width of the rectangle
             //horizontal = size of the horizantol of the rectangle
-            rect(x, y, actualWidth, height);
+            rect(x, y, actualWidth, actualHeight);
 
           x = x + actualWidth;
 
         }
-        y = y + height;
+        y = y + actualHeight;
     }
 
 }
